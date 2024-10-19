@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection and Teacher Assignment System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .course-selection {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select, textarea, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #4cae4c;
+        }
+        .teacher-profile {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .rating {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Course Selection and Teacher Assignment System</h1>
+
+    <!-- Course Selection Section -->
+    <div class="course-selection">
+        <h2>Select Your Courses</h2>
+
+        <!-- Theory Course Selection -->
+        <label for="theory-courses">Select 4 Theory Courses:</label>
+        <select id="theory-courses" multiple>
+            <option value="course1">Theory Course 1</option>
+            <option value="course2">Theory Course 2</option>
+            <option value="course3">Theory Course 3</option>
+            <option value="course4">Theory Course 4</option>
+        </select>
+
+        <!-- Lab Course Selection -->
+        <label for="lab-courses">Select 2 Lab Courses:</label>
+        <select id="lab-courses" multiple>
+            <option value="lab1">Lab Course 1</option>
+            <option value="lab2">Lab Course 2</option>
+            <option value="lab3">Lab Course 3</option>
+            <option value="lab4">Lab Course 4</option>
+        </select>
+
+        <!-- Teacher Assignment -->
+        <h3>Select a Teacher for Each Course</h3>
+        <label for="teacher1">Teacher for Theory Course 1:</label>
+        <select id="teacher1">
+            <option value="teacher1">ravikanth(Rating: 4.5, Projects: 5, Patents: 2)</option>
+            <option value="teacher2">naveen (Rating: 4.2, Projects: 3, Patents: 1)</option>
+        </select>
+
+        <label for="teacher2">Teacher for Theory Course 2:</label>
+        <select id="teacher2">
+            <option value="teacher1">harinath(Rating: 4.8, Projects: 7, Patents: 3)</option>
+            <option value="teacher2">swetha (Rating: 4.6, Projects: 4, Patents: 2)</option>
+        </select>
+
+        <!-- Add more teacher selection fields as required -->
+
+        <!-- Submit Button -->
+        <button class="button" id="submit-selection">Submit Selections</button>
+    </div>
+
+    <!-- Teacher Profile Section -->
+    <div class="teacher-profile-section">
+        <h2>Teacher Profiles</h2>
+
+        <!-- Example of a Teacher Profile -->
+        <div class="teacher-profile">
+            <h3>ravikanth</h3>
+            <p><strong>Rating:</strong> <span class="rating">4.5</span></p>
+            <p><strong>Research Projects:</strong> 5</p>
+            <p><strong>Patents:</strong> 2</p>
+            <p><strong>Academic Background:</strong> PhD in Computer Science, MIT</p>
+            <button class="button" id="details.html">View More</button>
+        </div>
+
+        <!-- Add more teacher profiles as needed -->
+    </div>
+
+    <!-- Feedback Section -->
+    <div class="feedback-section">
+        <h2>Submit Feedback for a Teacher</h2>
+        <label for="teacher-feedback">Select a Teacher:</label>
+        <select id="teacher-feedback">
+            <option value="teacher1">ravikanth</option>
+            <option value="teacher2">naveen</option>
+            <!-- Add more teachers -->
+        </select>
+
+        <label for="feedback-text">Your Feedback:</label>
+        <textarea id="feedback-text" rows="5" placeholder="Write your feedback here..."></textarea>
+
+        <!-- Submit Feedback Button -->
+        <button class="button" id="submit-feedback">Submit Feedback</button>
+    </div>
+</div>
+
+<!-- Add JavaScript here for form validation, interaction, and dynamic updates -->
+<script>
+    document.getElementById("submit-selection").addEventListener("click", function() {
+        alert("Course selections submitted successfully!");
+        // Add AJAX or backend form submission logic
+    });
+
+    document.getElementById("submit-feedback").addEventListener("click", function() {
+        alert("Feedback submitted successfully!");
+        // Add AJAX or backend form submission logic
+    });
+</script>
+
+</body>
+</html>
